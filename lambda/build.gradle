@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'junit:junit:4.12'
+}
+//解决控制台中文乱码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
